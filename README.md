@@ -9,9 +9,9 @@ General setup
 ----------
 The example is set to use Internet Explorer driver, therefore some preinstallation steps required:
 1. Download [InternetExplorerDriver](https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver)
-2. Configure System.setProperty("webdriver.ie.driver") in source code YandexMarketTest.java - specify the full path to downloaded InternetExplorerDriver.exe
+2. Configure `System.setProperty("webdriver.ie.driver")` in source code `YandexMarketTest.java` - specify the full path to downloaded InternetExplorerDriver.exe
 3. You will need [Maven](https://maven.apache.org/download.cgi) installed on your computer (to check if you have one, run "mvn -version" in command line)
-4. Set JAVA_HOME system variable to your JDK (Java Developmen Kit) library. If you don't have the JDK yet, it's time to download one. 
+4. Set `JAVA_HOME` system variable to your JDK (Java Developmen Kit) library. If you don't have the JDK yet, it's time to download one. 
 
 NOTE – a path to JDK (not JRE) is requires, e.g. see example below:
 
@@ -38,7 +38,7 @@ More info about these settings on the links:
 
 Internet Explore specific issues
 ----------
-.sendKeys() method runs too slow on InternetExplorerDriver x64 bit version. The solution is simple - switch to 32bit version of driver fix the issue. And don't forget to update InternetExplorerDriver path in System.setProperty("webdriver.ie.driver")
+`.sendKeys()` method runs too slow on InternetExplorerDriver x64 bit version. The solution is simple - switch to 32bit version of driver fix the issue. And don't forget to update InternetExplorerDriver path in `System.setProperty("webdriver.ie.driver")`
 
 More info about this issue on:  [WebDriver and IE10 very slow input](https://stackoverflow.com/questions/14461827/webdriver-and-ie10-very-slow-input)
 
@@ -75,10 +75,11 @@ To conclude, all-in-one command to prepare maven project, then run tests, then b
 ```shell
 mvn clean test allure:serve
 ```
-**This should work in most cases.**
+_This should work in most cases._
+
 
 Suggestions
 ----------
 As a suggestion for dynamic-development projects I would recommend [jetty-maven-plugin](https://www.eclipse.org/jetty/documentation/current/jetty-maven-plugin.html). 
 
-I do not want to include this one in my project to keep the example simple and including only necessary things for the work of a bundle Junit+Webdriver+Allure. But you can try.
+I do not want to include this one in the example to keep it simple and include only necessary things for the work of a bundle Junit+Webdriver+Allure. But you can try.
